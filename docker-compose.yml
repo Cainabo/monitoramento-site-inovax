@@ -1,0 +1,10 @@
+services:
+  monitoramento:
+    build: .
+    container_name: monitoramento_site
+    env_file:
+    - .env
+    restart: always
+    volumes:
+      - ./logs:/app/logs
+      - ./baselines:/app/baselines
