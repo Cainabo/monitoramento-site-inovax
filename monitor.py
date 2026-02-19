@@ -198,7 +198,7 @@ def comparar_com_baseline(url):
 
 import time
 
-INTERVALO = 60 * 2  # 2 minutos
+INTERVALO = 60 * 60 * 12  # produção (12h)
 
 def executar_monitoramento():
     if not os.path.exists(BASELINE_DIR):
