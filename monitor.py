@@ -7,40 +7,7 @@ import pytz
 def agora_formatado():
     fuso_brasil = pytz.timezone("America/Sao_Paulo")
     return datetime.now(fuso_brasil).strftime("%d/%m/%Y %H:%M:%S")
-
-
-#comentado, fução do Resend pra enviar e-mail. OBS: Algumas funções no código foram #alteradas devido a isso. 
-#def enviar_email(mensagem):
-#    api_key = os.getenv("RESEND_API_KEY")
-#    email_destino = os.getenv("EMAIL_DESTINO")
-#
-#    if not api_key or not email_destino:#
-#        print("❌ Variáveis de ambiente do Resend não configuradas")
-#        return
-#
-#    url = "https://api.resend.com/emails"
-#
-#    headers = {
-#        "Authorization": f"Bearer {api_key}",
-#        "Content-Type": "application/json"
-#    }
-#
-#    payload = {
-#        "from": "Monitoramento <onboarding@resend.dev>",
-#        "to": email_destino.split(","),
-#        "subject": "🚨 Alerta de Monitoramento do Site",
-#        "text": mensagem
-#    }
-#
-#    response = requests.post(url, json=payload, headers=headers)
-#
-#    if response.status_code in (200, 201):
-#        print("📧 E-mail enviado com sucesso")
-#    else:
-#        print("❌ Erro ao enviar e-mail:", response.text)
-
-
-
+    
 # =========================
 # CONFIGURAÇÕES GERAIS
 # =========================
